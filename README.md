@@ -1,3 +1,9 @@
+
+Used below references
+1. Use React and Spring Boot to Build a Simple CRUD App by Matt Raible (https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot).
+2. Dockerizing a React App (https://mherman.org/blog/dockerizing-a-react-app/).
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
