@@ -2,6 +2,30 @@
 Used below references
 1. Use React and Spring Boot to Build a Simple CRUD App by Matt Raible (https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot).
 2. Dockerizing a React App (https://mherman.org/blog/dockerizing-a-react-app/).
+3. Passing env variables in docker+nginx+react app (https://www.freecodecamp.org/news/how-to-implement-runtime-environment-variables-with-create-react-app-docker-and-nginx-7f9d42a91d70/).
+
+
+```
+docker build -f Dockerfile.prod -t patient-web-app:prod .
+
+docker run -it --rm -p 1337:80 -e API_URL=http://localhost:8080 patient-web-app:prod
+
+
+Dev:
+docker build -t patient-web-app:dev .
+
+docker run \
+    -it \
+    --rm \
+    -v ${PWD}:/app \
+    -v /app/node_modules \
+    -p 3001:3000 \
+    -e CHOKIDAR_USEPOLLING=true \
+    patient-web-app:dev
+```
+
+
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -15,6 +15,18 @@ RUN npm install react-scripts@3.4.1 -g --silent
 
 # add app
 COPY . ./
+#COPY ./env.sh ./public/
+#COPY .env .
+MOVE ./env.sh ./public/
+MOVE ./env-config.js ./public/
+RUN apk add --no-cache bash
 
+# Make our shell script executable
+#RUN chmod +x public/env.sh
+
+# Start Nginx server
+CMD ["/bin/bash", "-c", "ls -l && ls -l public/ && chmod +x /app/public/env.sh && /app/public/env.sh && npm start"]
 # start app
-CMD ["npm", "start"]
+#CMD ["npm", "start"]
+
+##THIS IS NOT WORKING BECAUSE OF THE ENV SCRIPT

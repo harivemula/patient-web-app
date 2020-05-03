@@ -6,11 +6,19 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "bootstrap": "^4.4.1",
+    "jquery": "^1.9.1",
+    "popper.js": "^1.16.1",
     "react": "^16.13.1",
+    "react-cookie": "^4.0.3",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "reactstrap": "^8.4.1",
+    "typescript": "^3.8.3"
   },
   "scripts": {
+    "dev": "chmod +x ./env.sh && ./env.sh && cp env-config.js ./public/ && react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
